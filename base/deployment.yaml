@@ -4,6 +4,7 @@ metadata:
   labels:
     app: quarkus-demo
   name: quarkus-demo
+  namespace: quarkus-demo
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -25,7 +26,7 @@ spec:
         app: quarkus-demo
     spec:
       containers:
-      - image: smorgan912/tektondemo@sha256:8e47c27d6805febfabba437f4366a830f25071c897b2b2da94ef23cb0cf61193
+      - image: smorgan912/tektondemo:1.1
         imagePullPolicy: Always
         name: quarkus-demo
         ports:

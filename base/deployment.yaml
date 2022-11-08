@@ -26,7 +26,7 @@ spec:
         app: quarkus-demo
     spec:
       containers:
-      - image: smorgan912/tektondemo:1.1
+      - image: smorgan912/tektondemo:1.0-SNAPSHOT
         imagePullPolicy: Always
         name: quarkus-demo
         ports:

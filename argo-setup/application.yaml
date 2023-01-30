@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: quarkus-demo
+  namespace: argo
+spec:
+  destination:
+    namespace: quarkus-demo
+    server: https://kubernetes.default.svc
+  project: quarkus-demo
+  source:
+    directory:
+      recurse: true
+    path: base
+    repoURL: https://github.com/smorgan912/ArgoCDDemo
+    targetRevision: HEAD
